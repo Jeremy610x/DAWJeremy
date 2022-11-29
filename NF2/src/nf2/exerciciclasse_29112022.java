@@ -4,10 +4,27 @@
  */
 package nf2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author jepa2698
  */
 public class exerciciclasse_29112022 {
+    public static void main(String[] args) {
+        
+        int [] numeros = new int [6];
+        
+        //demanar dades
+        Scanner sc = new Scanner (System.in);
+        for (int i = 0 ; i < numeros.length; i++){
+            System.out.println("Introduce valor " + (i+1) + "-");
+            numeros[i] = sc.nextInt();
+                }
+        Utilitats.mostrarArray(numeros);
+        
+        
+    }
+    
     
 }
