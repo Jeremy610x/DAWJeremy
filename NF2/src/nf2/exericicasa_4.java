@@ -34,7 +34,7 @@ public class exericicasa_4 {
             }
         
             if(numeros[index]<0){
-          negativo=negativo-numeros[index];
+          negativo=negativo+numeros[index];
             }
         
             System.out.println("El suma de positivos es " + positivo);
