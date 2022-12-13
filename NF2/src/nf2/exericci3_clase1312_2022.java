@@ -20,8 +20,10 @@ public class exericci3_clase1312_2022 {
      apell2= ponString("Pon tu segundo apellido");
         System.out.println(nombre+apell1+apell2);
         String nombreUsuario = nombre.substring(0,3) 
-                + apell1.substring(0,3)     + apell2.substring(0,3);
+                + apell1.substring(0,3)   
+                + apell2.substring(0,3);
         System.out.println(nombreUsuario.toUpperCase());
+   
     }
     
 
