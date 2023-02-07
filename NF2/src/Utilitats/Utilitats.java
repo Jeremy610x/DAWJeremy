@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author jepa2698
  */
 public class Utilitats {
-    /**
+     /**
        * Pide un valor al usuario y solo lo devuelve si es positivo
        * @return valor positivo
        */
@@ -92,9 +92,44 @@ public class Utilitats {
     
     public static void mostrarArray(int[] valores)
     {
-        for (int i = 0; i < valores.length; i++) {
-            System.out.println("Posicio " + i + " conte -> " + valores[i]);
+        for (int i = 0; i <= (valores.length-1); i++) {
+            System.out.println("index " + i +  "posicio" + (i+1) + " conte -> " + valores[i]);
             
+        }
+    }
+    
+    public static void mostrarArray_Integer(Integer[] valores)
+    {
+        for (int i = 0; i <= (valores.length-1); i++) {
+            System.out.println("posicio" + (i+1) + ":" + valores[i]);
+            
+        }
+    }   
+    
+        /**
+     * te pedira un string y lo retorna
+     * @param pregunta el texto que se mostrara en pantalla
+     * @return la palabra introducida
+     */
+    public static String ponString(String pregunta) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(pregunta);
+        String respuesta = sc.nextLine();
+        return respuesta;
+        //return sc.nextLine();
+    }
+    
+    
+    public static void mostrarArray2D(int[][] mapa)
+    {
+            for (int fila = 0; fila < mapa.length; fila++) {
+            //mapa.length em dona les files
+                for (int col = 0; col < mapa[fila].length; col++) 
+                {
+                    //mapa[0].length dona les columnes existents
+                System.out.print(mapa[fila][col] + "-");
+                }
+            System.out.println("");
         }
     }
     
