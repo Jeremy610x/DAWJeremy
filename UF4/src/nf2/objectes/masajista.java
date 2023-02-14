@@ -9,15 +9,24 @@ package nf2.objectes;
  * @author jepa2698
  */
 public class masajista extends PersonalEquipo{
-    
-    private String titulacion;
+   
+    protected String titulación;
 
-    public String getTitulacion() {
-        return titulacion;
+    public masajista(int id, String nombre) {
+        super(id, nombre);
+        this.edad = 30;
+        this.titulación ="Titulo en masaje personal";
     }
 
-    public void setTitulacion(String titulacion) {
-        this.titulacion = titulacion;
+    public String getTitulación() {
+        return titulación;
+    }
+    
+    
+    
+    public void darMasaje()
+    {
+        System.out.println(nombre+ " doy masaje a los jugadores");
     }
     
     

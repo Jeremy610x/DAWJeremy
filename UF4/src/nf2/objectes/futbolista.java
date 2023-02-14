@@ -10,14 +10,45 @@ package nf2.objectes;
  */
 public class futbolista extends PersonalEquipo{
  
-    private int goles;
+  protected int goles;
+
+    public futbolista(int id, String nombre) {
+        super(id, nombre);
+        this.edad=20;
+        this.goles = 0;
+    }
 
     public int getGoles() {
         return goles;
     }
+    
+    
+    
+    
+    
+    public void jugarPartido()
+    {
+        System.out.println(nombre+ " jugando el partido");
+        this.salary += 1000;
+        System.out.println("Aumento el sueldo.... " + salary);
+    }
+    
+    public void entrenar()
+    {
+        System.out.println(nombre+ " entreno fuerte para el partido");
+    }
 
-    public void setGoles(int goles) {
-        this.goles = goles;
+    @Override
+    public boolean equals(Object obj) {
+        boolean igual= super.equals(obj); 
+        if(!(obj instanceof futbolista))
+        {
+            return false;
+        }
+        else
+        {
+            return igual;
+        }
     }
     
     
