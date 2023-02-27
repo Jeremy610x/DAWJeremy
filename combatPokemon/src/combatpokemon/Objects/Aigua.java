@@ -4,6 +4,8 @@
  */
 package combatpokemon.Objects;
 
+import java.util.Random;
+
 /**
  *
  * @author jepa2698
@@ -17,8 +19,19 @@ public final class Aigua extends Pokemon{
         
         
     }
+    public void propietataigua(int corassa){
     
-        
+    corassa = 2;
+    if(corassa>0){
+    CP=0;
+    corassa--;
+    
+    }
+    
+    }
+    
+    
+
     }
 
         

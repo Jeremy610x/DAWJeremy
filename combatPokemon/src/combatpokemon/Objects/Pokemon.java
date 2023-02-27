@@ -9,9 +9,9 @@ package combatpokemon.Objects;
  * @author jepa2698
  */
 public class Pokemon {
-    private final String NomPokemon;
-    int CP;
-    private boolean Viu;
+    protected final String NomPokemon;
+    protected int CP;
+    protected boolean Viu;
 
     public Pokemon(String NomPokemon, int CP, boolean Viu) {
         this.NomPokemon = NomPokemon;
@@ -24,6 +24,12 @@ public class Pokemon {
         return NomPokemon;
     }
 
+    @Override
+    
+    public String toString() {
+       return   (NomPokemon +"Nom del pokemon es  i el CombatPoint es " + CP );
+ 
+    }   
     public int getCP() {
         return CP;
     }
@@ -32,10 +38,5 @@ public class Pokemon {
         return Viu;
     }
 
-    @Override
     
-    public String toString() {
-       return   (NomPokemon +"Nom del pokemon es  i el CombatPoint es " + CP );
- 
-    }    
 }

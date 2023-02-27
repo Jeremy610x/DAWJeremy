@@ -4,6 +4,8 @@
  */
 package combatpokemon.Objects;
 
+import java.util.Random;
+
 /**
  *
  * @author jepa2698
@@ -15,5 +17,17 @@ public final class Electric extends Pokemon{
         CP=50;
         Viu=true;
     }
+    public void Potenciador (int atac, int propietat){
+    propietat=2;
+    if (atac<=4){
+    atac=atac+5;
+    propietat = propietat--;
+    }
+    
+    
+    }
+    
+ 
+    
     
 }
