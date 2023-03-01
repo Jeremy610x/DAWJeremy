@@ -4,6 +4,9 @@
  */
 package menuapp;
 
+import menuapp.Objects.Menu;
+import menuapp.Objects.OptionItem;
+
 /**
  *
  * @author jepa2698
@@ -15,6 +18,15 @@ public class MenuApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+            Menu Fifa = new Menu("Fifa 23");
+            
+            
+            
+            
+            Fifa.AddOption(new OptionItem("Settings"));
+            System.out.println("Numero de opciones añadidas" + Fifa.NUmeroOptionMenu());
+            
+            
     }
     
 }
