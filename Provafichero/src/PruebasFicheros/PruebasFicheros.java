@@ -6,6 +6,9 @@ package PruebasFicheros;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +21,7 @@ public class PruebasFicheros {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
         prubasficheros();
@@ -26,7 +29,7 @@ public class PruebasFicheros {
       
         mostrarficherosDocumentos();
         leerfichero();
-        
+        leerficherocopia();
         
         
     }
@@ -81,13 +84,13 @@ public class PruebasFicheros {
 
     private static void leerfichero() {
         File fichero_leer = new File ("ficheros\\datos.txt");
-        String linea;
+        int linea;
         Scanner lectorArchivo;
         try {
             lectorArchivo = new Scanner (fichero_leer);
             
             while(lectorArchivo.hasNextLine()){
-            linea= lectorArchivo.nextLine();
+            linea= lectorArchivo.nextInt();
                
             
             
@@ -95,6 +98,32 @@ public class PruebasFicheros {
             //IMPORTANT SEMPRE S'HA DE TANCAR EL ARXIU
             }
             lectorArchivo.close();
+            
+            
+        } catch (FileNotFoundException ex) {
+            System.out.println("Fichero " + fichero_leer.getName()+ " no existe " + ex.getMessage());
+        }
+    }
+     private static void leerficherocopia() throws IOException {
+        File fichero_leer = new File ("ficheros\\datos.txt");
+        File fichero_escritura = new File ("ficheros\\copia_datos.txt");
+        
+        String  linea;
+        Scanner lectorArchivo;
+        Writer escritura; 
+        try {
+             escritura = new FileWriter(fichero_escritura,true);
+            lectorArchivo = new Scanner (fichero_leer);
+            
+            while(lectorArchivo.hasNextLine()){
+                
+            linea= lectorArchivo.nextLine();
+            System.out.println("Frase leida-->" + linea );
+            //IMPORTANT SEMPRE S'HA DE TANCAR EL ARXIU
+            System.out.println("Frase leida-->" + escritura );
+            }
+            lectorArchivo.close();
+           escritura.close(); 
             
             
         } catch (FileNotFoundException ex) {
