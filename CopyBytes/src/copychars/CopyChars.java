@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package solutionfitxers;
+package copychars;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,8 @@ import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+import copychars.FicheroEscrituraCaracteres;
+import copychars.FicheroLecturaCaracteres;
 /**
  *
  * @author bardaji
@@ -55,7 +56,31 @@ public class CopyChars {
      */
     public void displayCharArray(List<Character> data) {
         //TODO write the array to file
- 
+        try {
+            FicheroLecturaCaracteres lectura =
+                    new FicheroLecturaCaracteres("");
+        
+            do
+            {
+                Character = lectura.LeerCaracter();
+                Character = (char) lectura;
+                
+            }while(lectura!=-1);
+            
+            lectura.cerrarFichero();
+            System.out.println("Lectura de ArrayCaracter");
+        } catch (FileNotFoundException ex) {
+             System.out.println("Fichero no existe... " + ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println("Error lectura fichero" + ex.getMessage());
+        }
+        
+        
+        
+        
+        
+        
+        
         //END TODO
         
     }
@@ -69,7 +94,13 @@ public class CopyChars {
     public int writeCharsToFile(String filename, List<Character> data) {
         int counter = 0;
         //TODO write the array to file
-
+       
+        
+        
+        
+        
+        
+        
         //END TODO
         return counter;
     }

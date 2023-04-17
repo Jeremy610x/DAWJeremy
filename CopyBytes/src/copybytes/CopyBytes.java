@@ -51,7 +51,21 @@ public class CopyBytes {
      */
     public void displayByteArray(List<Byte> data) {
         //TODO display List
-       
+        FicheroLecturaByte Byte;
+        int int_byte;
+         try {
+         Byte = new FicheroLecturaByte("data");
+             do{
+                System.out.println("empezando a leer");
+                int_byte=Byte.leerByte();
+                
+             }while(int_byte!=-1);
+             System.out.println("fichero leido ");
+         
+             Byte.cerrarFichero();
+         } catch (FileNotFoundException ex) {
+             System.out.println("Fichero no existe... " + ex.getMessage());
+        
         
         
         
@@ -68,6 +82,33 @@ public class CopyBytes {
     public int writeBytesToFile(String filename, List<Byte> data) {
          int counter = 0;
         //TODO write the array to file
+        FicheroEscrituraByte filename;
+        int int_byte;
+         try {
+             filename = new FicheroEscrituraByte("filename");
+             do{
+                System.out.println("empezando a leer");
+                int_byte=Byte.leerByte();
+                if(int_byte!=-1)
+                {
+                    filename.escribirIntByte(int_byte);
+                    System.out.println((byte) int_byte);
+                }
+             }while(int_byte!=-1);
+             System.out.println("fichero leido cerrando hecha la copia");
+             Byte.cerrarFichero();
+             filename.cerrarFichero();
+         } catch (FileNotFoundException ex) {
+             System.out.println("Fichero no existe... " + ex.getMessage());
+         } catch (IOException ex) {
+             System.out.println("Error lectura fichero" + ex.getMessage());
+         }
+        
+        
+        
+        
+        
+        
         //END TODO
         return counter;
     }
