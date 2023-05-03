@@ -25,6 +25,10 @@ public class PokedexUI {
         mainMenu = new MainMenu();
         uiReader = new Scanner(System.in);
         uiReader.useDelimiter("\n");
+    
+        
+        
+        
     }
 
     /**

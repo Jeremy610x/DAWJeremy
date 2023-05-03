@@ -26,61 +26,24 @@ public class PokemonDao {
     
     private Pokemon fromResultSet(ResultSet rs) throws SQLException {
     
-    Pokemon poke;
-    long id = rs.getLong("id");
-    String name = rs.getString("name");
-    double height = rs.getDouble("height");
-    double weight = rs.getDouble("weight");
-    String genre = rs.getString("genre");
-    String type = rs.getString("tipo");
-     
-        poke = new Pokemon(id, name, height, weight, genre.MALE, tipo);
-        return poke;
- 
+    Pokemon poke;   
+      long id = rs.getLong("id");
+      String name = rs.getString("name");
+      double height = rs.getDouble("height");
+      double weight = rs.getDouble("weight");
+////    Genre genre = rs.getString("genre");
+        String gen=rs.getString("genre");
+        Genre genero = Genre.valueOf(gen);
+        PokemonType tipo = new PokemonType(id, name, name);
+       
+        
+      poke = new Pokemon(id, name, height, weight, genero,tipo);
+      return poke;
     }
+
+
     
-    
-    
-    
-    
-    
-    
-    
- public int insert (Pokemon pokemon) throws SQLException{
- 
-     int result = 0;
- 
-    try (Connection conn = dbConnect.getConnection()){
- 
-    String query = "insert into pokemon values (null,?,?,?,?,?)";
-    PreparedStatement st = conn.prepareStatement(query);
-    st.setLong(result, result);
- 
- 
- 
- 
- 
- 
- 
- }
-        return 0;
- 
- 
- 
- 
- 
- 
- }
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
+
     
     
 }
