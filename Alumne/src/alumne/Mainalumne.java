@@ -6,6 +6,7 @@ package alumne;
 
 import java.util.ArrayList;
 import alumne.Alumne;
+import java.util.List;
 /**
  *
  * @author jepa2698
@@ -16,18 +17,20 @@ public class Mainalumne {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
         dadesalumnes();
+        guardarfitxer();
         
         
         ArrayList<Alumne> listaalumnes = new ArrayList<Alumne >();
+        
+     
        listaalumnes.add(new Alumne ("Alumne1",18,"pass1"));
        listaalumnes.add(new Alumne ("Alumne2",18,"pass2"));
        listaalumnes.add(new Alumne ("Alumne3",18,"pass3"));
         listaalumnes.add(new Alumne ("Alumne4",18,"pass4"));
         listaalumnes.add(new Alumne ("Alumne5",18,"pass5"));
         
-        
+         
         
         
     }
@@ -38,6 +41,15 @@ public class Mainalumne {
             nom=listaalumnes.get(i).getNom();
             
         }
+        
+        
+        
+    }
+
+    private static void guardarfitxer(List<Alumne> llista) {
+       
+        
+        
         
         
         
