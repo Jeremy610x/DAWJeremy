@@ -8,25 +8,25 @@ import java.util.Objects;
  */
 public class PokemonType {
 
-    private long id;
+    private int id;
     private String name;
     private String attack;
 
-    public PokemonType(long id, String name, String attack) {
+    public PokemonType(int id, String name, String attack) {
         this.id = id;
         this.name = name;
         this.attack = attack;
     }
 
-    public PokemonType(long id) {
+    public PokemonType(int id) {
         this.id = id;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

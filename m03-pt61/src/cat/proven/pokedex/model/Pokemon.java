@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public class Pokemon {
 
-    private long id;
+    private int id;
     private String name;
     private double height;
     private double weight;
@@ -16,7 +16,7 @@ public class Pokemon {
     private PokemonType tipo;
     /* faltaria si lo implementais atributo para la evolution;*/
 
-    public Pokemon(long id, String name, double height, double weight, Genre genre, PokemonType type) {
+    public Pokemon(int id, String name, double height, double weight, Genre genre, PokemonType type) {
         this.id = id;
         this.name = name;
         this.height = height;
@@ -30,11 +30,11 @@ public class Pokemon {
     
     /*pokemon es igual a otro por su nombre*/
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -80,7 +80,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon{" + "id=" + id + ", name=" + name + ", height=" + height + ", weight=" + weight + ", genre=" + genre + ", tipo=" + tipo + '}';
+        return "Pokemon{" + "id=" + id + ", name=" + name + ", height=" + height + ", weight=" + weight + ", genre=" + genre + ", tipo=" + tipo.getId() + '}';
     }
 
   

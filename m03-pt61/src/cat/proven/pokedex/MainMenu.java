@@ -19,5 +19,6 @@ public class MainMenu extends Menu {
         addOption(new Option("Change type attack name", "type/attack/modify"));
         addOption(new Option("Show pokemon which evolutions to", "pokemon/evolution"));
         addOption(new Option("Remove type and all pokemon of this type ", "type/remove"));
+        addOption(new Option("List all types", "pokemon/all"));
     }
 }

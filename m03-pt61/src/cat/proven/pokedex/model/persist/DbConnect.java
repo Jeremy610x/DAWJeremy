@@ -17,7 +17,7 @@ public final class DbConnect {
     static final String BD_NAME = "pokemondb";
     static final String USER = "pokemonusr";
     static final String PASSWORD = "pokemonpsw";
-      static final String PARAMS = "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    static final String PARAMS = "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
     public static void loadDriver() throws ClassNotFoundException {
         //getConnectionProperties(); better if connection properties are read from a configuration file
