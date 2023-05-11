@@ -285,9 +285,9 @@ public class PokedexUI {
            String sid = doInput("Type id : ");
           try{
             
-              long id = Long.parseLong(sid);
-              PokemonType typ = new PokemonType(0);
-              List<Pokemon> result = model.findPokemonbyType(typ);
+              int type_id = Integer.parseInt(sid);
+               PokemonType tipo = new PokemonType(type_id);
+              List<Pokemon> result = model.findPokemonbyType(tipo);
               if (result != null) {
                displayMultiple(result);
               } else {

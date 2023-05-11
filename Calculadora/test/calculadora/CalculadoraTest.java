@@ -1,15 +1,15 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package calculadora;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -20,19 +20,19 @@ public class CalculadoraTest {
     public CalculadoraTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    @BeforeEach
+    @Before
     public void setUp() {
     }
     
-    @AfterEach
+    @After
     public void tearDown() {
     }
 
@@ -42,14 +42,14 @@ public class CalculadoraTest {
     @Test
     public void testSumarNumeros() {
         System.out.println("sumarNumeros");
-        int a = 1;
-        int b = 1;
+        int a = 10;
+        int b = 5;
         Calculadora instance = new Calculadora();
-        int expResult = 2;
+        int expResult = 15;
         int result = instance.sumarNumeros(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      //  fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,14 +58,14 @@ public class CalculadoraTest {
     @Test
     public void testRestarNumeros() {
         System.out.println("restarNumeros");
-        int a = 0;
-        int b = 0;
+        int a = 10;
+        int b = 5;
         Calculadora instance = new Calculadora();
-        int expResult = 0;
+        int expResult = 5;
         int result = instance.restarNumeros(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      //  fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -74,14 +74,14 @@ public class CalculadoraTest {
     @Test
     public void testMultiNumeros() {
         System.out.println("multiNumeros");
-        int a = 0;
-        int b = 0;
+        int a = 2;
+        int b = 2;
         Calculadora instance = new Calculadora();
-        int expResult = 0;
+        int expResult = 4;
         int result = instance.multiNumeros(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -90,14 +90,14 @@ public class CalculadoraTest {
     @Test
     public void testDividirNumeros() {
         System.out.println("dividirNumeros");
-        int a = 0;
-        int b = 0;
+        int a = 10;
+        int b = 2;
         Calculadora instance = new Calculadora();
-        int expResult = 0;
+        int expResult = 5;
         int result = instance.dividirNumeros(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

@@ -7,12 +7,6 @@
             <file>file:/C:/Users/usuari/Downloads/m03-pt61/m03-pt61/src/cat/proven/pokedex/PokedexUI.java</file>
             <file>file:/C:/Users/usuari/Downloads/m03-pt61/m03-pt61/src/cat/proven/pokedex/MainMenu.java</file>
         </group>
-        <group>
-            <file>file:/C:/Users/jepa2698/Documents/NetBeansProjects/m03-pt61/src/cat/proven/pokedex/model/persist/PokemonDao.java</file>
-            <file>file:/C:/Users/jepa2698/Documents/NetBeansProjects/m03-pt61/src/cat/proven/pokedex/model/Genre.java</file>
-            <file>file:/C:/Users/jepa2698/Documents/NetBeansProjects/m03-pt61/src/cat/proven/pokedex/PokedexUI.java</file>
-            <file>file:/C:/Users/jepa2698/Documents/NetBeansProjects/m03-pt61/src/cat/proven/pokedex/model/PokemonModel.java</file>
-            <file>file:/C:/Users/jepa2698/Documents/NetBeansProjects/m03-pt61/src/cat/proven/pokedex/model/Pokemon.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
